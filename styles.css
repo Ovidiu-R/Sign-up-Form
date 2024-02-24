@@ -1,7 +1,7 @@
-/* * {
+* {
     padding: 0px;
     margin: 0px;
-} */
+}
 
 body {
     display: flex;
@@ -20,36 +20,58 @@ body {
 }
 
 .text {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-items: center;
-    flex-grow: 1;
+    /* flex-grow: 1; */
 }
 
 .left, .right {
     display: flex;
-    flex-direction: column;
     justify-items: space-between;
 }
 
 form {
     display: flex;
-    flex-grow: 1;
+    flex-direction: column;
+    /* flex-grow: 1; */
     padding-left: 50px;
+    /* padding-bottom: 200px; */
 }
 
 .heading, .submit{
     background-color: paleturquoise;
     padding-left: 50px;
+    /* flex-basis: 300px; */
+    /* flex-grow: 1; */
+}
+
+.submit {
+    flex-basis: 300px;
     flex-grow: 1;
 }
 
 .heading {
     padding-top: 200px;
+    padding-bottom: 60px;
 }
 
 .dataEntry {
     background-color: white;
     box-shadow: black;
-    padding-left: 50px;
+    padding: 0px 0px 20px 50px;
+}
+
+.dataEntry > h2{
+    padding: 20px 0px;
+}
+
+ul{
+    padding-right: 50px;
+}
+
+li {
+    display: flex;
+    padding-bottom: 20px;
 }
