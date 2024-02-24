@@ -1,5 +1,14 @@
+/* * {
+    padding: 0px;
+    margin: 0px;
+} */
+
 body {
     display: flex;
+    flex-direction: row;
+    justify-items: center;
+    margin: 0px;
+    padding: 0px;
 }
 
 .visuals {
@@ -13,16 +22,34 @@ body {
 .text {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 200px 200px 200px 50px;
+    justify-items: center;
+    flex-grow: 1;
 }
 
 .left, .right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-items: space-between;
 }
 
 form {
     display: flex;
+    flex-grow: 1;
+    padding-left: 50px;
+}
+
+.heading, .submit{
+    background-color: paleturquoise;
+    padding-left: 50px;
+    flex-grow: 1;
+}
+
+.heading {
+    padding-top: 200px;
+}
+
+.dataEntry {
+    background-color: white;
+    box-shadow: black;
+    padding-left: 50px;
 }
