@@ -3,20 +3,54 @@
     margin: 0px;
 }
 
+@font-face {
+    font-family: 'Meditate';
+    src: url('media/Meditation.ttf') format('truetype');
+}
+
 body {
     display: flex;
     flex-direction: row;
     justify-items: center;
-    margin: 0px;
-    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .visuals {
     background-image: url(media/flatStonesCropped.jpg);
-    /* width: 500px; */
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     flex-basis: 660px;
     flex-shrink: 0;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 200px;
+    /* flex-grow: 1; */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo > h1{
+    color: white;
+    font-size: 70px;
+    align-self: center;
+    font-family: 'Meditate';
+    padding-left: 10px;
+}
+
+.credits {
+    display: inline-block;
+    justify-content: end;
+}
+
+img {
+    height: 130px;
+    fill: aquamarine;
 }
 
 .text {
@@ -24,7 +58,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    /* flex-grow: 1; */
 }
 
 .left, .right {
@@ -34,33 +67,36 @@ body {
 
 form {
     display: flex;
-    flex-direction: column;
-    /* flex-grow: 1; */
     padding-left: 50px;
-    /* padding-bottom: 200px; */
 }
 
 .heading, .submit{
-    background-color: paleturquoise;
+    background-color: rgb(223, 239, 239);
     padding-left: 50px;
-    /* flex-basis: 300px; */
-    /* flex-grow: 1; */
 }
 
 .submit {
     flex-basis: 300px;
     flex-grow: 1;
+    padding-top: 50px;
 }
 
 .heading {
-    padding-top: 200px;
+    padding-right: 350px;
+    padding-top: 120px;
     padding-bottom: 60px;
+}
+
+.heading h2 {
+    margin-top: 15px;
 }
 
 .dataEntry {
     background-color: white;
-    box-shadow: black;
     padding: 0px 0px 20px 50px;
+    box-shadow: 5px 10px 5px -5px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
 }
 
 .dataEntry > h2{
@@ -68,10 +104,31 @@ form {
 }
 
 ul{
+    display: flex;
     padding-right: 50px;
+    flex-direction: column;
 }
 
 li {
     display: flex;
+    flex-direction: column;
     padding-bottom: 20px;
+}
+
+input{
+    padding: 3px 5px;
+    border: 1px rgb(64, 200, 241) solid;
+    border-radius: 8px;
+}
+
+button {
+    padding: 15px 70px;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.submit > p {
+    padding-top: 15px;
 }
