@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sign-up-Form</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
 </head>
@@ -22,38 +22,39 @@
     </div>
     <div class="text">
         <div class="heading">
-            <h2>Discover Serenity: Your Gateway to Mindfulness and Inner Peace with <br> Our Meditation App! Dive into a World of Tranquility and Self-Reflection. <br> Cultivate Calmness, Focus, and Well-Being Anytime, Anywhere.</h2>
-            <h2>Let Our Guided Sessions Lead You to a Balanced Life of Harmony and Renewed Energy. Start Your Journey Today!</h2>
+            <h2>Discover Serenity: Your Gateway to Mindfulness and Inner Peace  <br> is only a step away! Dive into a World of Tranquility and Self-Reflection. <br> Cultivate Calmness, Focus, and Well-Being Anytime, Anywhere.</h2>
+            <h2>Start Your Journey Today!</h2>
         </div>
         <div class="dataEntry">
             <h2>Let's do this</h2>
             <form id="details" action="">
                 <ul class="left">
                     <li>
-                        <label for="firstName">FIRST NAME</label>
-                        <input type="text" name="" id="firstName" tabindex="1" required>
+                        <label for="firstName">FIRST NAME <span aria-label="required">*</span></label>
+                        <input type="text" name="first_name" id="firstName" tabindex="1" required>
                     </li>
                     <li>
-                        <label for="email">EMAIL</label>
-                        <input type="email" name="" id="email" tabindex="3" placeholder="JohnSmith@gmail.com" required>
+                        <label for="email">EMAIL <span aria-label="required">*</span></label>
+                        <input type="email" name="email" id="email" tabindex="3" placeholder="JohnSmith@gmail.com" required>
                     </li>
                     <li>
-                        <label for="password">PASSWORD</label>
-                        <input type="password" name="" id="password" tabindex="5" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$" required>
+                        <label for="password">PASSWORD <span aria-label="required">*</span></label>
+                        <input type="password" name="pass" id="password" tabindex="5" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?([^\w\s]|[_])).{8,}$" required>
                     </li>
                 </ul>
                 <ul class="right">
                     <li>
-                        <label for="lastName">LAST NAME</label>
-                        <input type="text" name="" id="lastName" tabindex="2" required>
+                        <label for="lastName">LAST NAME <span aria-label="required">*</span></label>
+                        <input type="text" name="last_name" id="lastName" tabindex="2" required>
                     </li>
                     <li>
                         <label for="phoneNumber">PHONE NUMBER</label>
-                        <input type="tel" name="" id="phoneNumber" tabindex="4">
+                        <input type="tel" name="phoneNum" id="phoneNumber" tabindex="4">
                     </li>
                     <li>
-                        <label for="passConfirm">CONFIRM PASSWORD</label>
-                        <input type="password" name="" id="passConfirm" tabindex="6" required>
+                        <label for="passConfirm">CONFIRM PASSWORD <span aria-label="required">*</span></label>
+                        <input type="password" name="" id="passConfirm" tabindex="6" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?([^\w\s]|[_])).{8,}$" required>
+                        <span id="checkMatch" style="display: inline-block;"></span>
                      </li>
                 </ul>
             </form>
