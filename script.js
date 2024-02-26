@@ -3,12 +3,25 @@ document.addEventListener('DOMContentLoaded',() => {
     const pass = document.getElementById('password');
     const passConfirm = document.getElementById('passConfirm');
     document.getElementById('submit').addEventListener('click', () => {
-        if (document.getElementById('password').value === document.getElementById('passConfirm').value){
+        if (pass.value === passConfirm.value && pass.validity.valid){
             document.getElementById('details').submit();
         } else {
             checkMatch.textContent = "✘";
-            pass.style.backgroundColor = 'red';
-            passConfirm.style.backgroundColor = 'red';
+            inputColor('red');
         }
     });
+    passConfirm.addEventListener('input', (e) => {
+        if (e.target.value === pass.value){
+            inputColor('green');
+        } else {
+            inputColor('white');
+        }
+    });
+
+
+function inputColor(color) {
+    pass.style.backgroundColor = color;
+    passConfirm.style.backgroundColor = color;
+}
+
 });

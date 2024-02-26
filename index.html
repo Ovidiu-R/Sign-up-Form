@@ -31,11 +31,11 @@
                 <ul class="left">
                     <li>
                         <label for="firstName">FIRST NAME <span aria-label="required">*</span></label>
-                        <input type="text" name="first_name" id="firstName" tabindex="1" required>
+                        <input type="text" name="first_name" id="firstName" tabindex="1" placeholder="John" required>
                     </li>
                     <li>
                         <label for="email">EMAIL <span aria-label="required">*</span></label>
-                        <input type="email" name="email" id="email" tabindex="3" placeholder="JohnSmith@gmail.com" required>
+                        <input type="email" name="email" id="email" tabindex="3" placeholder="JohnSmith@gmail.com" pattern="^[^@]+@[^@]+\.[^@]+$" required>
                     </li>
                     <li>
                         <label for="password">PASSWORD <span aria-label="required">*</span></label>
@@ -45,11 +45,11 @@
                 <ul class="right">
                     <li>
                         <label for="lastName">LAST NAME <span aria-label="required">*</span></label>
-                        <input type="text" name="last_name" id="lastName" tabindex="2" required>
+                        <input type="text" name="last_name" id="lastName" tabindex="2" placeholder="Smith" required>
                     </li>
                     <li>
                         <label for="phoneNumber">PHONE NUMBER</label>
-                        <input type="tel" name="phoneNum" id="phoneNumber" tabindex="4">
+                        <input type="tel" name="phoneNum" id="phoneNumber" tabindex="4" placeholder="(412) 939 7996" >
                     </li>
                     <li>
                         <label for="passConfirm">CONFIRM PASSWORD <span aria-label="required">*</span></label>
@@ -58,6 +58,9 @@
                      </li>
                 </ul>
             </form>
+            <div>
+                <div><span id="passRule">At least 8 characters long, including a capital letter, number and special symbol</span></div>
+            </div>
         </div>
         <div class="submit">
             <button id="submit">Create Account</button>
