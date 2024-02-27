@@ -87,6 +87,7 @@ form {
 .submit {
     flex-basis: 300px;
     padding-top: 50px;
+    /* text-align: center; */
 }
 
 .heading {
@@ -156,7 +157,7 @@ input:focus:invalid{
 }
 
 input:focus{
-    background-color: rgb(237, 247, 252);
+    background-color: lightgray;
     border: 1px solid black;
 }
 
@@ -166,15 +167,18 @@ input:focus :valid{
     border: 2px solid green;
 }
 
-
+::placeholder {
+    color: rgb(166, 190, 210);
+}
 
 #passRule{
+    padding-top: 0px;
     padding-left: 0.5vw;
     font-size: 10px;
 }
 
 button {
-    padding: 15px 70px;
+    padding: 14px 60px;
     background-color: green;
     color: whitesmoke;
     font-size: 18px;
@@ -190,4 +194,5 @@ button:hover{
 
 .submit > p {
     padding-top: 15px;
+    padding-left: 5px;
 }
